@@ -16,6 +16,5 @@ VOLUME ["/config", "/data/backup"]
 # 8080: Hardware without ssl/tls support
 # 9443: Blynk app, https, web sockets, admin port
 EXPOSE 8080 9443
-
 WORKDIR /data
 ENTRYPOINT ["java", "-jar", "/blynk/server.jar", "-dataFolder", "/data", "-serverConfig", "/config/server.properties"]
